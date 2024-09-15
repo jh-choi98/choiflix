@@ -120,7 +120,7 @@ function Slider({ title, data, offset }: ISlider) {
   const onBoxClicked = (movieId: number) => {
     history.push(`/movies/${movieId}`);
   };
-  return data.results ? (
+  return data && data.results ? (
     <Wrapper>
       <Title>{title}</Title>
       <AnimatePresence initial={false} onExitComplete={() => setLeaving(false)}>
